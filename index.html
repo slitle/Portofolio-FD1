@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-PT">
 <head>
   <meta charset="UTF-8" />
@@ -7,31 +6,23 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
     <h1>Pedro Cravid</h1>
     <p>Portofólio Gráfico</p>
   </header>
 
   <section class="intro">
+    <div id="intro-bg"></div>
     <h2>Introdução</h2>
     <p>Bem-vindo ao meu portfólio gráfico. Aqui podes encontrar fotografias tiradas por mim e os meus contactos.</p>
   </section>
 
-  <!-- Preview aleatório -->
-  <section class="galeria-preview">
+  <!-- Selecção de categorias (quadrados com bg branco por trás) -->
+  <section class="gallery-select panel-white">
     <h2>Galeria</h2>
-    <div class="foto preview" onclick="abrirGaleria()">
-      <img id="preview-img" src="imagens/placeholder.jpg" alt="Preview">
-    </div>
-    <button class="btn" onclick="abrirGaleria()">Ver Galeria</button>
+    <div id="category-tiles" class="tiles"></div>
   </section>
 
-  <!-- Botões de categorias -->
-  <section id="buttons" style="display:none; text-align:center;">
-    <button class="btn" onclick="carregarCategoria('vasco')">Vasco da Gama</button>
-    <button class="btn" onclick="carregarCategoria('paisagens')">Quinta das Conchas</button>
-  </section>
 
   <!-- Galeria completa -->
   <section id="galeria-completa" class="galeria" style="display:none;"></section>
@@ -42,10 +33,16 @@
     <img id="modal-img" class="modal-img">
   </div>
 
-  <footer>
+  <footer class="panel-white contacts">
     <h2>Contactos</h2>
-    <p>Email: <a href="mailto:pedroacravid@gmail.com">pedroacravid@gmail.com</a></p>
-    <p>Instagram: <a href="#">@pedrocravid</a></p>
+    <p>
+      <span class="icon">📧</span>
+      <a href="mailto:pedroacravid@gmail.com">pedroacravid@gmail.com</a>
+    </p>
+    <p>
+      <span class="icon">📷</span>
+      <a href="https://www.instagram.com/pedro.cravid/">@pedrocravid</a>
+    </p>
   </footer>
 
   <script src="scripts.js"></script>

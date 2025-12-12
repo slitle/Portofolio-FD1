@@ -14,9 +14,25 @@ header {
 
 .intro {
   max-width: 900px;
-  margin: auto;
-  padding: 2rem;
+  margin: 2.5rem auto;
+  padding: 3rem;
   font-size: 1.1rem;
+  position: relative;
+  overflow: hidden;
+  color: #111;
+}
+
+/* Background specific to intro section */
+#intro-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.8s ease-in-out, filter 0.3s ease-in-out;
+  opacity: 1;
+  filter: brightness(0.95);
 }
 
 .galeria-preview {
@@ -39,6 +55,54 @@ header {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.panel-white {
+  background: white;
+  margin: 1.2rem auto;
+  max-width: 1200px;
+  padding: 1.6rem;
+  border-radius: 10px;
+}
+
+.tiles {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.tile {
+  width: 220px;
+  height: 140px;
+  border-radius: 8px;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tile::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.35));
+}
+
+.tile > span {
+  position: relative;
+  z-index: 2;
+  padding: 0.6rem 0.8rem;
+}
+
+.contacts a { color: #111; text-decoration: none; }
+.contacts .icon { margin-right: 0.6rem; }
 
 .galeria {
   max-width: 1200px;
@@ -90,4 +154,17 @@ header {
 }
 #preview-img.mostrar {
   opacity: 1;
+}
+
+/* Fullscreen background layer updated pelo JS */
+#site-bg {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  z-index: -1;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: opacity 0.8s ease-in-out, filter 0.3s ease-in-out;
+  opacity: 1;
+  filter: brightness(0.95);
 }
